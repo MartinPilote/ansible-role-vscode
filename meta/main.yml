@@ -1,0 +1,19 @@
+---
+dependencies:
+
+galaxy_info:
+  author: Martin Pilote
+  description: 'Ansible role to install video and audio codecs'
+  repository: 'https://github.com/MartinPilote/ansible-codec'
+  license: 'GPL-3.0-only'
+  min_ansible_version: 2.4
+  platforms:
+  - name: 'Archlinux'
+    versions:
+    - all
+  - name: 'Fedora'
+    versions:
+    - all
+  galaxy_tags:
+    - vscode
+...
