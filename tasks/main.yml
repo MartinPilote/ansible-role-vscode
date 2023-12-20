@@ -1,7 +1,7 @@
 ---
 - include_vars: "{{ ansible_distribution }}.yml"
 
-- name: Microsoft Repository (RedHat)
+- name: Microsoft Repository (RedHat or Fedora)
   block:
     - name: Microsoft Repository GPG key
       rpm_key:
@@ -17,7 +17,7 @@
         gpgcheck : yes
         gpgkey: https://packages.microsoft.com/keys/microsoft.asc
   when:
-    - ansible_os_family == "RedHat"
+    - ansible_os_family == "RedHat" or ansible_os_family == "RedFedoraHat"
 
 - name: Install package
   package:
